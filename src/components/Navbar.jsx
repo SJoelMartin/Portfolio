@@ -1,6 +1,6 @@
 import "./Navbar.css"
 import { Sun, Moon } from "lucide-react";
-import { ThemeContext } from "../context/themeContext";
+import { ThemeContext } from "../context/ThemeContext";
 import { useContext } from "react";
 
 function Navbar() {
