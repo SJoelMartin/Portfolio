@@ -3,7 +3,7 @@ import {getAccessToken,getRefreshToken,setTokens,clearTokens} from "./tokenServi
 import {useNavigate} from "react-router-dom";
 
 const authApi = axios.create({
-    baseURL: "http://localhost:8080/api",
+    baseURL: import.meta.env.VITE_API_URL,
     headers: {
         "Content-Type": "application/json"
     }
@@ -36,8 +36,8 @@ authApi.interceptors.response.use(
             originalRequest._retry = true;
             try{
                 const refreshToken = getRefreshToken();
-                const response = await axios.post(
-                    "http://localhost:8080/api/user/refresh",
+                const response = await authApi.post(
+                    "/user/refresh",
                     {
                         refreshToken
                     }

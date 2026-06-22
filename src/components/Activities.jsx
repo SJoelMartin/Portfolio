@@ -234,8 +234,8 @@ function Activities() {
         {
             title: "Vihansa",
             location: "Sri Ramakrishna Institute of Technology",
-            team: "/images/AURC.jpg",
-            personal: "/images/AURC Me.jpg"
+            team: "/images/SRIT.jpg",
+            personal: "/images/SRIT Me.jpg"
         }
     ];
 

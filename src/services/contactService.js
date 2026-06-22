@@ -11,7 +11,7 @@ export const fetchDetails = async (page,pageSize) => {
 }
 
 export const fetchContacts = async (username) => {
-    const response = await api.get(`/user?username=${username}`);
+    const response = await authApi.get(`/user?username=${username}`);
     return response.data;
 }
 
