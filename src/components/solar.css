@@ -1,0 +1,93 @@
+.orbit{
+    position:absolute;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    animation:rotateOrbit linear infinite;
+    pointer-events: none;
+}
+
+.reverse{
+    animation-name:rotateReverse;
+}
+
+.ring{
+    position:absolute;
+    width:100%;
+    height:100%;
+    border:1px dashed rgba(255,255,255,.15);
+    border-radius:50%;
+    box-sizing: border-box;
+    pointer-events: none;
+}
+
+@keyframes rotateOrbit{
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+@keyframes rotateReverse{
+    from{
+        transform:rotate(360deg);
+    }
+    to{
+        transform:rotate(0deg);
+    }
+}
+
+.stars{
+    background-image:
+    radial-gradient(white 1px, transparent 1px);
+    background-size:40px 40px;
+    opacity:.2;
+}
+
+.counter-cw{
+    animation: counterCW linear infinite;
+}
+
+.counter-ccw{
+    animation: counterCCW linear infinite;
+}
+
+@keyframes counterCW{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes counterCCW{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.star{
+    position:absolute;
+    border-radius:50%;
+    background:white;
+    box-shadow: 0 0 6px white;
+    opacity:.3;
+    animation: twinkle ease-in-out infinite;
+}
+
+@keyframes twinkle{
+    0%,100%{
+        opacity:.2;
+        transform:scale(.8);
+    }
+    50%{
+        opacity:1;
+        transform:scale(1.3);
+    }
+}
