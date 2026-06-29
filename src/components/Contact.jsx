@@ -231,7 +231,7 @@ function Contact(){
                             <img title="LinkedIn" className="w-12 h-12 object-contain" src="../icons/linkedin.png"/>
                         </a>
                         <a 
-                            href="https://github.com/joelmartin" 
+                            href="https://github.com/SJoelMartin" 
                             target="_blank"
                             className="
                                 bg-slate-50 dark:bg-slate-800
