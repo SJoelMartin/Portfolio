@@ -1,6 +1,8 @@
 import { useState } from "react";
 import axios from "axios";
 import { Bot, Send } from "lucide-react";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 function AIRecruiterAssistant() {
     const [message, setMessage] = useState("");
@@ -114,7 +116,9 @@ function AIRecruiterAssistant() {
                             : "bg-slate-800 text-slate-200"
                         }`}
                         >
-                        {msg.text}
+                            <ReactMarkdown remarkPlugins={[remarkGfm]} className="prose prose-invert max-w-none">
+                                {msg.text}
+                            </ReactMarkdown>
                         </div>
                     ))}
                     {loading && (
