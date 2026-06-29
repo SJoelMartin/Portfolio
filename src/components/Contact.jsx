@@ -197,8 +197,7 @@ function Contact(){
                     <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">Connect with Me</h2>
                     <div className="grid grid-cols-2 gap-6">
                         <a 
-                            href="mailto:joelmartin.s.1703@gmail.com" 
-                            target="_blank"
+                            href="mailto:joelmartin.s.1703@gmail.com"
                             className="
                                 bg-slate-50 dark:bg-slate-800
                                 border border-slate-200 dark:border-slate-700
@@ -209,7 +208,6 @@ function Contact(){
                                 hover:shadow-lg
                                 transition duration-300
                             "
-                            rel="noopener noreferrer"
                         >   
                             <img title="Gmail" className="w-12 h-12 object-contain" src="../icons/gmail.png"/>
                         </a>
