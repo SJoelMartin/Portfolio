@@ -197,7 +197,7 @@ function Contact(){
                     <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">Connect with Me</h2>
                     <div className="grid grid-cols-2 gap-6">
                         <a 
-                            href="https://mail.google.com/mail/?view=cm&to=joelmartin.s.1703@gmail.com&su=Portfolio%20Connection&body=Hi%20Joel,"
+                            href="mailto:joelmartin.s.1703@gmail.com?subject=Portfolio%20Connection"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="
