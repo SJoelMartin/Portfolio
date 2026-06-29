@@ -6,7 +6,6 @@ export const fetchDetails = async (page,pageSize) => {
     params.number = page;
     params.size = pageSize;
     const response = await authApi.get(`/contact`, { params } );
-    console.log(response);
     return response.data;
 }
 

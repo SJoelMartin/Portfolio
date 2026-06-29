@@ -12,7 +12,6 @@ function Contact(){
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log(formData);
         submitContact(formData);
         resetForm();
         document.getElementById("form-success-msg").style.display = "block";

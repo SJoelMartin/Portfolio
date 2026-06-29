@@ -39,7 +39,6 @@ function AIRecruiterAssistant() {
                     message: question
                 }
             );
-            console.log(url);
             setChat((prev) => [
                 ...prev,
                 {

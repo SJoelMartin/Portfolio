@@ -37,7 +37,6 @@ import { ThemeContext } from "../context/ThemeContext";
 
 function About() {
     const { theme } = useContext(ThemeContext);
-    console.log("Current theme in About component:", theme);
     return (
         <section id="about" 
             className="

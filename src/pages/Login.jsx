@@ -17,7 +17,6 @@ function Login() {
         // Add your login logic here
         try {
             const response = await loginUser(formData);
-            console.log(response.data);
             // Save JWT Token
             const { accessToken, refreshToken } = response.data;
             setTokens(accessToken, refreshToken);
