@@ -17,9 +17,9 @@ function Home(){
             <RecruiterAssistant/>
             <Education/>
             <Experience/>
+            <SkillsSolarSystem/>
             <Projects/>
             <Activities/>
-            <SkillsSolarSystem/>
             <Contact/>
         </div>
     )
