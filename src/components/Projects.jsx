@@ -193,6 +193,9 @@
 
 // export default Projects
 
+import { ExternalLink } from "lucide-react";
+import { FaGithub } from "react-icons/fa";
+
 function Projects() {
 
     const projectList = [
@@ -210,7 +213,8 @@ function Projects() {
             highlight:
                 "Portable admin & user management system for various applications that require security",
             gradient: "from-indigo-500 to-purple-500",
-            badgeColor: "bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300"
+            badgeColor: "bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300",
+            github: "https://github.com/SJoelMartin/AUTH.SYS-Engine"
         },
         
         {
@@ -228,7 +232,8 @@ function Projects() {
             highlight:
                 "Helps designers optimize interfaces using behavioral analytics and UX intelligence.",
             gradient: "from-indigo-500 to-purple-500",
-            badgeColor: "bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300"
+            badgeColor: "bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300",
+            github: "https://github.com/SJoelMartin/CognifyUX"
         },
 
         {
@@ -315,7 +320,15 @@ function Projects() {
                 <div className="grid md:grid-cols-2 gap-10">
                     {projectList.map((project, index) => (
                         <article key={index} className="group relative">
-                            <div className={`absolute inset-0 bg-gradient-to-r ${project.gradient} opacity-10 blur-3xl rounded-3xl group-hover:opacity-20 transition duration-500`}>
+                            <div 
+                                className={
+                                    `
+                                        absolute inset-0 bg-gradient-to-r 
+                                        ${project.gradient} opacity-10 blur-3xl 
+                                        rounded-3xl group-hover:opacity-20 transition duration-500
+                                    `
+                                }
+                            >
                             </div>
                             <div 
                                 className="
@@ -331,6 +344,37 @@ function Projects() {
                                     transition duration-500
                                 "
                             >
+
+                                {
+                                    project.github && (
+                                        <a
+                                            href={project.github}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="
+                                                absolute
+                                                top-4
+                                                right-4
+                                                p-2.5
+                                                rounded-full
+                                                bg-white/90 dark:bg-slate-900/90
+                                                backdrop-blur-sm
+                                                border border-gray-200 dark:border-slate-700
+                                                text-gray-700 dark:text-gray-300
+                                                hover:text-black dark:hover:text-white
+                                                hover:bg-gray-100 dark:hover:bg-slate-800
+                                                hover:scale-110
+                                                transition-all duration-300
+                                                shadow-md hover:shadow-lg
+                                                z-20
+                                            "
+                                            aria-label="View GitHub Repository"
+                                            title="View Source Code"
+                                        >
+                                            <FaGithub size={20} strokeWidth={2} />
+                                        </a>
+                                    )
+                                }
                                 <div className={`h-2 bg-gradient-to-r ${project.gradient}`}></div>
                                 <div className="p-8">
                                     <div className="flex items-start justify-between gap-4 mb-6">
@@ -401,35 +445,6 @@ function Projects() {
                                         <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
                                             👉 {project.highlight}
                                         </p>
-                                    </div>
-                                    <div className="flex flex-wrap gap-4">
-                                        <button 
-                                            className="
-                                                px-6 py-3
-                                                bg-gray-900 dark:bg-blue-600
-                                                text-white
-                                                rounded-xl
-                                                hover:bg-black dark:hover:bg-blue-700
-                                                hover:scale-105
-                                                transition duration-300
-                                                shadow-lg
-                                            "
-                                        >
-                                            View Project
-                                        </button>
-                                        <button 
-                                            className="
-                                                px-6 py-3
-                                                border border-gray-300 dark:border-slate-600
-                                                rounded-xl
-                                                text-gray-700 dark:text-gray-300
-                                                hover:bg-gray-100 dark:hover:bg-slate-800
-                                                hover:scale-105
-                                                transition duration-300
-                                            "
-                                        >
-                                            GitHub
-                                        </button>
                                     </div>
                                 </div>
                             </div>

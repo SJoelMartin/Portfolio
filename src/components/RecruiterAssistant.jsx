@@ -116,7 +116,7 @@ function AIRecruiterAssistant() {
                             : "bg-slate-800 text-slate-200"
                         }`}
                         >
-                            <ReactMarkdown remarkPlugins={[remarkGfm]} className="prose prose-invert max-w-none">
+                            <ReactMarkdown remarkPlugins={[remarkGfm]}>
                                 {msg.text}
                             </ReactMarkdown>
                         </div>
